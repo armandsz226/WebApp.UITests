@@ -55,7 +55,10 @@ namespace Common.Automation
                 throw new Exception($"Element is not clickable {@by}");
             }
         }
-
+        public bool IsDisplayedById(string id)
+        {
+          return _driver.FindElement(By.Id(id)).Displayed;
+        }
         public void ClickByLinkText(string linkText)
         {
             try

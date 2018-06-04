@@ -20,7 +20,7 @@ namespace WebApp.UITests
         [AfterScenario]
         public void DisposeWebDriver()
         {
-            _driver.Dispose();
+            //_driver.Dispose();
         }
     }
 }

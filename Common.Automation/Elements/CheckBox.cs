@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using OpenQA.Selenium;
 
 namespace Common.Automation.Elements
 {
@@ -14,10 +15,12 @@ namespace Common.Automation.Elements
             var element = GetElement(by);
             element.Click();
         }
-        public void Check(By by, int num)
+        public void Check(By by, int num, out string checkedElementsId)
         {
             var elements = GetElements(by);
-            elements[num].Click();
+            var checkedElements = elements[num];
+            checkedElements.Click();
+            checkedElementsId = checkedElements.GetAttribute("Id");
         }
     }
 }

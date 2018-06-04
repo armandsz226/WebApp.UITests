@@ -32,10 +32,12 @@ namespace WebApp.UITests.StepDefinitions
         {
             var elementsToClick = RandomHelper.GetRandomNumbers(items, 1, 20);
             var favorites = new List<FavoritesModel>();
+            string elementId;
             foreach (var c in elementsToClick)
             {
-                CheckBox.Check(SearchResultLocators.ChkResults, c);
-
+                CheckBox.Check(SearchResultLocators.ChkResults, c, out elementId);
+                favorites.Add(new FavoritesModel() { Id = elementId });
+                ScenarioContext.Current["favorites"] = favorites;
             }
         }
 

@@ -108,7 +108,7 @@ this.FeatureBackground();
 #line 18
  testRunner.And("I open link \"Расширенный поиск\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
- testRunner.And("I enter search option price between 160 and 300", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter search option price between \"160\" and \"300.50\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
  testRunner.And("I execute search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 21

@@ -16,7 +16,7 @@ Scenario: Search for a computer by additional parameters
 	And I sort search results by "Цена"
 	And I select transaction type "Продажа"
 	And I open link "Расширенный поиск"
-	And I enter search option price between 160 and 300
+	And I enter search option price between "160" and "300.50"
 	And I execute search
 	And I add to memo 3 random ads
 	Then selected ads matches with the previously selected 
